@@ -4,7 +4,7 @@ while True:
     # Print the menu and get the user's input
     print("\n1. Add a note")
     print("2. View all notes")
-    print("1. Exit")
+    print("3. Exit")
     choice = input("Enter your choice: ")
 
     # Add a new note
