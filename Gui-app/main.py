@@ -24,14 +24,14 @@ class NoteApp(QMainWindow):
         exit_action = QAction("Exit", self)
         exit_action.triggered.connect(self.close)
         self.file_menu = self.menuBar().addMenu("File")
-        self.formatting_menu = self.menuBar().addMenu("Formatting")
+        #self.formatting_menu = self.menuBar().addMenu("Formatting")
 
         # add it to the file menu
         self.file_menu.addAction(save_action)
         self.file_menu.addAction(load_action)
         self.file_menu.addAction(exit_action)
         
-
+  
 if True:
     app = QApplication(sys.argv)
     window = NoteApp()
