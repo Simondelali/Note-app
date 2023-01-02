@@ -33,11 +33,11 @@ class NoteApp(QMainWindow):
 
         # add it to the formatting menu
         self.formatting_menu.addAction(save_action)
-    file_name = "notes.txt"
+    
     def save_notes(self):
         options = QFileDialog.options()
         options |= QFileDialog.ReadOnly
-        file_name, _ = QFileDialog.getSaveFileName(self,"Save Notes","Text Files(*.txt);;All Files(*)", options=options)
+        file_name, _ = QFileDialog.getSaveFileName(self,"Save Notes","Text Files(*.txt);;All Files(*)", options=QFileDialog.ReadOnly)
         if file_name:
             with open(file_name, 'w') as f:
                 f.write(self.text_edit.toPlainText())
